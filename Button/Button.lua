@@ -1,6 +1,6 @@
-Button = { active=true }
+Button = { active=true, color=colors.red }
 
-function Button:new(x,y,x2,y2,text,onPress,active)
+function Button:new(x,y,x2,y2,text,onPress,active, color)
     local o = {}
     setmetatable(o, self)
     self.__index = self
@@ -11,6 +11,7 @@ function Button:new(x,y,x2,y2,text,onPress,active)
     o.text = text
     o.onPress = onPress
     o.active = active
+    o.color = color or colors.red
     return o
 end
 

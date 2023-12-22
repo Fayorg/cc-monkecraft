@@ -42,7 +42,7 @@ for i, btn in ipairs(buttons) do
 end
 
 while(true) do
-    event, side, x, y = os.pullEvent("monitor_touch")
+    local event, side, x, y = os.pullEvent("monitor_touch")
     for i, btn in ipairs(buttons) do
         btn:check(x,y)
     end
