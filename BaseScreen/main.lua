@@ -16,7 +16,7 @@ end
 function refreshButtonExecutor()
     mon.clear()
     for i, btn in ipairs(buttons) do
-        btn:draw(mon, colors.red)
+        btn:draw(mon)
     end
 end
 
