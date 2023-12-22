@@ -23,7 +23,7 @@ end
 function alarmButtonExecutor()
     if not redstone.getOutput("top") then
         redstone.setOutput("top", true)
-        buttons[2]:draw(mon, colors.blue)
+        buttons[2]:draw(mon)
     else
         redstone.setOutput("top", false)
         buttons[2]:draw(mon, colors.red)
