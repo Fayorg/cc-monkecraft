@@ -31,7 +31,7 @@ function alarmButtonExecutor()
 end
 
 buttons[1] = Button:new(screenX-10,screenY-2,screenX,screenY,"Reboot",rebootButtonExecutor,true)
-buttons[2] = Button:new(12,screenY-2,screenX-11,screenY,"Alarm",alarmButtonExecutor,true)
+buttons[2] = Button:new(12,screenY-2,screenX-11,screenY,"Alarm",alarmButtonExecutor,true, colors.green)
 buttons[3] = Button:new(1,screenY-2,11,screenY,"Refresh",refreshButtonExecutor,true)
 
 
