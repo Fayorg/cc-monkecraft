@@ -38,8 +38,8 @@ function Button:isActive()
     return self.active
 end
 
-function Button:draw(mon, color)
-    mon.setBackgroundColor(color)
+function Button:draw(mon)
+    mon.setBackgroundColor(self.color)
     yspot = math.floor((self.y + self.y2) /2)
     xspot = math.floor((self.x2 - self.x - string.len(self.text)) /2) +1
     
