@@ -41,6 +41,15 @@ for i, btn in ipairs(buttons) do
     btn:draw(mon)
 end
 
+local credit = "Made with love by Fayorg - github.com/fayorg";
+local version = "v1.0.0"
+mon.setBackgroundColor(colors.red)
+mon.setCursorPos(1,1)
+mon.write(credit)
+for i = 1, screenX - string.len(credit)  - string.len(version) do
+    mon.write(" ")
+end
+
 while(true) do
     local event, side, x, y = os.pullEvent("monitor_touch")
     for i, btn in ipairs(buttons) do
