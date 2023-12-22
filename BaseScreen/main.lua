@@ -38,7 +38,7 @@ buttons[3] = Button:new(1,screenY-2,11,screenY,"Refresh",refreshButtonExecutor,t
 mon.clear()
 
 for i, btn in ipairs(buttons) do
-    btn:draw(mon, colors.red)
+    btn:draw(mon)
 end
 
 while(true) do
