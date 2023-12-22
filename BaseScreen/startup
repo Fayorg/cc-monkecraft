@@ -1,0 +1,18 @@
+local function git(repo,save)
+    local download = http.get(repo)
+    if download then
+        local handle = download.readAll()
+        download.close()
+        local file = fs.open(save, "w")
+        file.write(handle)
+        file.close()
+    else
+        print("Couldn't fetch resources from Github")
+    end
+end
+
+git("https://raw.githubusercontent.com/Fayorg/cc-monkecraft/master/Button/Button.lua", startup)
+git("https://raw.githubusercontent.com/Fayorg/cc-monkecraft/master/Button/Button.lua", "api/Button.lua")
+git("https://raw.githubusercontent.com/Fayorg/cc-monkecraft/master/BaseScreen/main.lua", "main.js")
+
+dofile("main.lua")
