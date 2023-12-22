@@ -11,7 +11,7 @@ local function git(repo,save)
     end
 end
 
-git("https://raw.githubusercontent.com/Fayorg/cc-monkecraft/master/BaseScreen/startup", startup)
+git("https://raw.githubusercontent.com/Fayorg/cc-monkecraft/master/BaseScreen/startup", "startup")
 git("https://raw.githubusercontent.com/Fayorg/cc-monkecraft/master/Button/Button.lua", "api/Button.lua")
 git("https://raw.githubusercontent.com/Fayorg/cc-monkecraft/master/BaseScreen/main.lua", "main.js")
 
