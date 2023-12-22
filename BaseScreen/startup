@@ -2,7 +2,7 @@ local function git(repo,save)
     local headers = {
         ["Cache-Control"] = "no-store"
     }
-    local download = http.get(repo)
+    local download = http.get(repo, headers)
     if download then
         local handle = download.readAll()
         download.close()
