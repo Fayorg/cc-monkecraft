@@ -37,18 +37,21 @@ buttons[3] = Button:new(1,screenY-2,11,screenY,"Refresh",refreshButtonExecutor,t
 
 mon.clear()
 
-local credit = "Made with love by Fayorg";
+local credit = "Base Screen";
 local version = "v1.0.0"
-mon.setBackgroundColor(colors.red)
-mon.setTextScale(0.5)
-mon.setCursorPos(1,1)
-mon.write(credit)
-for i = 1, screenX - string.len(credit)  - string.len(version) do
-    mon.write(" ")
+local witespace = screenX - string.len(credit)  - string.len(version)
+if witespace >= 0 then
+    mon.setBackgroundColor(colors.red)
+    mon.setTextScale(0.5)
+    mon.setCursorPos(1,1)
+    mon.write(credit)
+    for i = 1, screenX - string.len(credit)  - string.len(version) do
+        mon.write(" ")
+    end
+    mon.write(version)
+    mon.setTextScale(1)
+    mon.setBackgroundColor(colors.black)
 end
-mon.write(version)
-mon.setTextScale(1)
-mon.setBackgroundColor(colors.black)
 
 for i, btn in ipairs(buttons) do
     btn:draw(mon)
