@@ -40,12 +40,13 @@ mon.clear()
 local credit = "Base Screen";
 local version = "v1.0.0"
 local witespace = screenX - string.len(credit)  - string.len(version)
-if witespace >= 0 then
+print("Credit : ", (string.len(credit) + string.len(version) + witespace), "/", screenX)
+if witespace > 0 then
     mon.setBackgroundColor(colors.red)
     mon.setTextScale(0.5)
     mon.setCursorPos(1,1)
     mon.write(credit)
-    for i = 1, screenX - string.len(credit)  - string.len(version) do
+    for i = 1, witespace do
         mon.write(" ")
     end
     mon.write(version)
