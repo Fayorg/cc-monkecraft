@@ -46,9 +46,9 @@ if string.len(credit) + string.len(version) < screenX then
     mon.setTextScale(0.5)
     mon.setCursorPos(1,1)
     mon.write(credit)
-    for i = 1, witespace do
-        mon.write(" ")
-    end
+    -- for i = 1, witespace do
+    --     mon.write(" ")
+    -- end
     mon.write(version)
     mon.setTextScale(1)
     mon.setBackgroundColor(colors.black)
