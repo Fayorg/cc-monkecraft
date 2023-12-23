@@ -40,8 +40,8 @@ mon.clear()
 local credit = "Base Screen";
 local version = "v1.0.0"
 local witespace = screenX - string.len(credit)  - string.len(version)
-print("Credit : ", (string.len(credit) + string.len(version) + witespace), "/", screenX)
-if witespace > 0 then
+print("Credit : ", (string.len(credit) + string.len(version)), "/", screenX)
+if string.len(credit) + string.len(version) < screenX then
     mon.setBackgroundColor(colors.red)
     mon.setTextScale(0.5)
     mon.setCursorPos(1,1)
