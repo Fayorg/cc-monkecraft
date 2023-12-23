@@ -44,6 +44,7 @@ end
 local credit = "Made with love by Fayorg - github.com/fayorg";
 local version = "v1.0.0"
 mon.setBackgroundColor(colors.red)
+mon.setTextScale(0.5)
 mon.setCursorPos(1,1)
 mon.write(credit)
 for i = 1, screenX - string.len(credit)  - string.len(version) do
