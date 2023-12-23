@@ -2,8 +2,8 @@ dofile("api/Button.lua")
 dofile("render.lua")
 dofile("ButtonExecutor.lua")
 
-local mon = peripheral.wrap("left")
-local screenX, screenY = mon.getSize()
+mon = peripheral.wrap("left")
+screenX, screenY = mon.getSize()
 
 buttons = {
     Button:new(screenX-10,screenY-2,screenX,screenY,"Reboot",rebootButtonExecutor,true),
