@@ -37,11 +37,7 @@ buttons[3] = Button:new(1,screenY-2,11,screenY,"Refresh",refreshButtonExecutor,t
 
 mon.clear()
 
-for i, btn in ipairs(buttons) do
-    btn:draw(mon)
-end
-
-local credit = "Made with love by Fayorg - github.com/fayorg";
+local credit = "Made with love by Fayorg";
 local version = "v1.0.0"
 mon.setBackgroundColor(colors.red)
 mon.setTextScale(0.5)
@@ -53,6 +49,10 @@ end
 mon.write(version)
 mon.setTextScale(1)
 mon.setBackgroundColor(colors.black)
+
+for i, btn in ipairs(buttons) do
+    btn:draw(mon)
+end
 
 while(true) do
     local event, side, x, y = os.pullEvent("monitor_touch")
