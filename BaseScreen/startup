@@ -17,5 +17,7 @@ end
 git("https://raw.githubusercontent.com/Fayorg/cc-monkecraft/master/BaseScreen/startup", "startup")
 git("https://raw.githubusercontent.com/Fayorg/cc-monkecraft/master/Button/Button.lua", "api/Button.lua")
 git("https://raw.githubusercontent.com/Fayorg/cc-monkecraft/master/BaseScreen/main.lua", "main.lua")
+git("https://raw.githubusercontent.com/Fayorg/cc-monkecraft/master/BaseScreen/render.lua", "render.lua")
+git("https://raw.githubusercontent.com/Fayorg/cc-monkecraft/master/BaseScreen/ButtonExecutor.lua", "ButtonExecutor.lua")
 
 dofile("main.lua")
