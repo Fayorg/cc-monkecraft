@@ -50,6 +50,8 @@ mon.write(credit)
 for i = 1, screenX - string.len(credit)  - string.len(version) do
     mon.write(" ")
 end
+mon.write(version)
+mon.setTextScale(1)
 mon.setBackgroundColor(colors.black)
 
 while(true) do
